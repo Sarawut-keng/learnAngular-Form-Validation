@@ -1,0 +1,39 @@
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	width: 100vw;
+	height: 60vh;
+}
+.container > * {
+	flex-basis: 30%;
+}
+form {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: repeat(4, 1fr);
+	background-color:white;
+	padding: 20px 0px;
+	box-shadow: 0px 0px 20px 0.5px rgba(0, 0, 0, 0.445);
+	border-radius: 5px;
+}
+.label {
+	text-align: right;
+	padding: 5px;
+}
+
+.input{
+	text-align: left;
+	padding: 5px
+}
+.data {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+}
+
+
