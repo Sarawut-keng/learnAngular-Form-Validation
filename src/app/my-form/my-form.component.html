@@ -18,12 +18,19 @@
 			</div>
 			<div class="input">
 				<input type="password" name="password" id="password" formControlName='password'>
+				<span style="color: red;" *ngIf="form.get('password')?.errors?.required">password is required</span>
+				<span style="color: red;" *ngIf="form.get('password')?.errors?.minlength">password should be at least 8 characters</span>
 			</div>
 			<div class="label">
 				<label for="confirmPassword">Confirm Password</label>
 			</div>
 			<div class="input">
 				<input type="password" name="confirmPassword" id="confirmPassword" formControlName='confirmPassword'>
+				<span style="color: red;" *ngIf="form.get('confirmPassword')?.errors?.required">password is required</span>
+			</div>
+			<div></div>
+			<div class="input">
+				<button [disabled]='form.invalid' (click)="submitForm()">Submit</button>
 			</div>
 		</form>
 	</div>
